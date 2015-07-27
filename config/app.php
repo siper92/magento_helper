@@ -138,6 +138,11 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
+         * Laravel auto complete + PHPStorm meta file generator
+         */
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
