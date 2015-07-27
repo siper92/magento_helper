@@ -10,3 +10,7 @@ nbproject
 composer.lock
 vendor
 composer.phar
+/bootstrap/compiled.php
+.env.*.php
+.env.php
+Thumbs.db
