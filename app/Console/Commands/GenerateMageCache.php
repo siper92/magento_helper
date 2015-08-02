@@ -41,10 +41,11 @@ class GenerateMageCache extends Command
         if(!$fileManager->isFile($mageRootFile)) {
             throw new RuntimeException("No magento project found in path:{$pathToMageStore}");
         } else {
-            $files = $fileManager->files($pathToMageStore);
-            $this->info("There are list of files found in: {$pathToMageStore}");
-            $this->info(print_r($files, true));
-
+            $configFileManager = new GenerateMageCache\ConfigCache($pathToMageStore);
+            $files = $configFileManager->getConfigFiles();
+            echo microtime(true) . PHP_EOL;
+            print_r($files);
+            echo microtime(true) . PHP_EOL;
         }
     }
 }
