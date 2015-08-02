@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace MagentoHelpUtility\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace MagentoHelpUtility\Jobs;
 
 use Illuminate\Bus\Queueable;
 

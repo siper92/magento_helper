@@ -145,9 +145,9 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        MagentoHelpUtility\Providers\AppServiceProvider::class,
+        MagentoHelpUtility\Providers\EventServiceProvider::class,
+        MagentoHelpUtility\Providers\RouteServiceProvider::class,
 
     ],
 
