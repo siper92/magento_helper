@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \MagentoHelpUtility\Console\Commands\Inspire::class,
+        \MagentoHelpUtility\Console\Commands\GenerateMageCache::class,
     ];
 
     /**
