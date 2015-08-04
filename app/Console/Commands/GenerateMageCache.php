@@ -4,9 +4,10 @@ namespace MagentoHelpUtility\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
+use MagentoHelpUtility\Handlers\GenerateMageCache;
 use RuntimeException;
 
-class GenerateMageCache extends Command
+class GenerateMageCacheCommand extends Command
 {
     /**
      * The name and signature of the console command.
@@ -30,22 +31,6 @@ class GenerateMageCache extends Command
      */
     public function handle()
     {
-        $fileManager = new Filesystem();
-        $pathToMageStore = $this->argument('mage_store_path');
-        if($pathToMageStore == "default") {
-            $pathToMageStore = getcwd();
-        }
 
-        $mageRootFile = $pathToMageStore . DIRECTORY_SEPARATOR . 'app/Mage.php';
-
-        if(!$fileManager->isFile($mageRootFile)) {
-            throw new RuntimeException("No magento project found in path:{$pathToMageStore}");
-        } else {
-            $configFileManager = new GenerateMageCache\ConfigCache($pathToMageStore);
-            $files = $configFileManager->getConfigFiles();
-            echo microtime(true) . PHP_EOL;
-            print_r($files);
-            echo microtime(true) . PHP_EOL;
-        }
     }
 }

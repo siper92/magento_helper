@@ -1,6 +1,6 @@
 <?php
 
-namespace MagentoHelpUtility\Console\Commands\GenerateMageCache;
+namespace MagentoHelpUtility\Handlers\GenerateMageCache;
 
 use Illuminate\Filesystem\Filesystem;
 use RuntimeException;
